@@ -13,6 +13,17 @@
       LR_CRITIC = 1e-3        # learning rate of the critic
       WEIGHT_DECAY = 0        # L2 weight decay
     </p>
+    <p> Model architecture:
+      The actor neural network consists of three layers:
+      - A fully connected layer with input of state size and output of 400 units
+      - A fully connected layer with input of 400 units and output of 300 units
+      - A fully connected layer with input of 300 units and output of the action size
+
+      The critic neural network consists of three layers:
+      - A fully connected layer with input of state size and output of 96 units
+      - A fully connected layer with input of 96 units and action size and output of 96 units
+      - A fully connected layer with input of 96 units and output of 1
+    </p>
     <p> Furthur improvements:
       We can add Batch normalization to the existing implementation. We can also try out different algorithms like PPO, TRPO or TNPG.
       We can also improve the overall hyperparamter search with some grid search opportunities, and also potentially searching for a better neural network with AutoML search.
